@@ -149,7 +149,7 @@ const fonts = () => {
 }
 const watchFiles = () => {
   browserSync.init({
-        server: { baseDir: "./app" },
+        server: { baseDir: "./src" },
         cors: true,
         notify: false,
         ui: false,
