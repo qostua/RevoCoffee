@@ -8,8 +8,13 @@
 // 800: Extra Bold (Ultra Bold)
 // 900: Black (Heavy)
 
-@include font-face("family", "url", 400);
+@include font-face("Montserrat", "Montserrat-Black", 900);
+@include font-face("Nunito", "Nunito-Bold", 700);
+@include font-face("Nunito", "Nunito-LightItalic", 300, italic);
+@include font-face("Nunito", "Nunito-Regular", 400);
+@include font-face("Nunito", "Nunito-SemiBold", 600);
 
 body {
   @include font(text);
+  @include text(16, 22, 300);
 }
