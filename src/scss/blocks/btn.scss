@@ -1,13 +1,14 @@
 .btn {
   display: inline-block;
 
-  padding: 10px 10px;
+  padding: 7px 16px;
 
   cursor: pointer;
   text-decoration: none;
 
   color: white;
   border: none;
+  background-color: $accent-color-d;
 
   @include font(text);
   @include text(18, 25);
