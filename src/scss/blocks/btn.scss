@@ -11,6 +11,6 @@
   background-color: $accent-color-d;
 
   @include font(text);
-  @include text(18, 25);
+  @include text(16, 22);
   @include active;
 }
