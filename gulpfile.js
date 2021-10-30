@@ -41,14 +41,20 @@ const scripts = () => {
 }
 const scriptsLibs = () => {
 	return src([
-		'libs/modernizr-webp.js',
-		'src/js/libs.js'
+		'src/js/libs.js',
 	])
 	.pipe(sourcemaps.init())
 	.pipe(concat('app-libs.js'))
 	.pipe(sourcemaps.write('.'))
 	.pipe(dest('src/js/'))
 	.pipe(browserSync.stream())
+}
+const scriptsModernizr = () => {
+	return src([
+		'libs/modernizr-webp.js',
+	])
+	.pipe(concat('app-modernizr.js'))
+	.pipe(dest('src/js/'))
 }
 const htmlPicture = () => {
 	return src('src/*.html')
@@ -168,7 +174,7 @@ const cleanSrc = () => {
 	return del(['src/css/*.*', 'src/fonts/*.*', 'src/img/*.*', 'src/js/*.map', 'src/js/app*.js'])
 }
 
-exports.default = parallel(htmlPicture, styles, svg, sprite, retina, convertWebp, scripts, scriptsLibs, fonts, watchFiles);
+exports.default = parallel(htmlPicture, styles, svg, sprite, retina, convertWebp, scripts, scriptsLibs, scriptsModernizr, fonts, watchFiles);
 exports.htmlPicture = htmlPicture;
 exports.cleanSrc = cleanSrc;
 
@@ -269,10 +275,15 @@ const scriptsLibsBuild = () => {
 	.pipe(uglify())
 	.pipe(dest('build/js/'))
 }
+const scriptsModernizrBuild = () => {
+	return src('src/js/app-modernizr.js')
+	.pipe(uglify())
+	.pipe(dest('build/js/'))
+}
 
 const cleanBuild = () => {
 	return del('build/*')
 }
 
-exports.build = series(cleanBuild, parallel(htmlBuild, stylesBuild, svgBuild, retinaBuild, convertWebpBuild, scriptsBuild, scriptsLibsBuild, resourcesBuild, fontsBuild));
+exports.build = series(cleanBuild, parallel(htmlBuild, stylesBuild, svgBuild, retinaBuild, convertWebpBuild, scriptsBuild, scriptsLibsBuild, scriptsModernizrBuild, resourcesBuild, fontsBuild));
 exports.cleanBuild = cleanBuild;
