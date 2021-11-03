@@ -19,3 +19,27 @@ body {
   @include font(text);
   @include text(16, 22, 300);
 }
+
+html {
+  font-size: 12px;
+}
+@media (min-width: 575.98px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (min-width: 767.98px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 991.98px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1199.98px) {
+  html {
+    font-size: $standard-font-size;
+  }
+}

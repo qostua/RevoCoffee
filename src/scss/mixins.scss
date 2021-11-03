@@ -10,15 +10,16 @@
 
   @include text(10, 10, 700);
 }
+
 @mixin text($size, $height: $size, $weight: 400) {
-  font-size: $size * 1px;
+  font-size: $size / $standard-font-size + rem;
   font-weight: $weight;
-  line-height: $height * 1px;
+  line-height: $height / $standard-font-size + rem;
 }
 
 @mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
+  width: $width + px;
+  height: $height + px;
 }
 
 @mixin active($hover-opacity: 0.6, $active-opacity: 0.3) {
