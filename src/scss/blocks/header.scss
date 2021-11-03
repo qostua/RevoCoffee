@@ -1,3 +1,18 @@
-.main-header {
+.header {
+  display: grid;
+  overflow: hidden;
 
+  grid-template-columns: 13fr 690px 10fr;
+}
+.header__logo-wrapper {
+  display: flex;
+
+  padding-top: 75px;
+  padding-right: 140px;
+
+  justify-content: flex-end;
+}
+.header__nav {
+  order: 2;
+}
 }
