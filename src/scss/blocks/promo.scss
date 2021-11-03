@@ -1,0 +1,65 @@
+.promo {
+  position: relative;
+}
+.promo__slogan {
+  position: absolute;
+  z-index: 1;
+  top: 505px;
+  left: -260px;
+
+  text-transform: uppercase;
+
+  color: $primary-color;
+
+  @include text(54, 70, 900);
+  @include font(title);
+}
+.promo__slogan-accent {
+  padding: 0 16px;
+
+  color: white;
+  background-color: $accent-color-d;
+}
+.promo__slogan-accent--white {
+  padding: 0 16px;
+
+  background-color: white;
+}
+.promo__slider {
+  position: relative;
+
+  width: 690px;
+  height: 100%;
+  min-height: 768px;
+
+  background-size: cover;
+
+  @include retina-bg("promo-slide-1");
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 51%;
+
+    content: "";
+    transform: translate(-50%, -50%);
+
+    background-image: url('../img/icon-play.svg');
+
+    @include size(12, 14);
+  }
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50.5%;
+
+    content: "";
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 4px 24px 0px rgba(74, 74, 74, 0.5);
+
+    @include size(54);
+  }
+}
