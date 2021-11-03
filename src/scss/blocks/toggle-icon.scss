@@ -1,0 +1,48 @@
+.toggle-btn {
+  cursor: pointer;
+
+  border: none;
+  background: none;
+
+  @include active;
+}
+.toggle-btn__icon-rects {
+  transition: 0.5s;
+  transition-property: transform;
+  transform-origin: 13px 13px;
+}
+.toggle-btn__icon-top-rect {
+  transition: 0.25s 0.5s;
+  transition-property: transform;
+  transform-origin: 13px 5px;
+}
+.toggle-btn__icon-middle-rect {
+  transition: 0.25s;
+  transition-property: transform;
+  transform-origin: 13px 13px;
+}
+.toggle-btn__icon-bottom-rect {
+  transition: 0.25s 0.5s;
+  transition-property: transform;
+  transform-origin: 13px 21px;
+}
+.toggle-btn--close .toggle-btn__icon-top-rect {
+  transition: 0.25s 0s;
+  transition-property: transform;
+  transform: translate(0, 8px);
+}
+.toggle-btn--close .toggle-btn__icon-middle-rect {
+  transition: transform 0.25s 0.25s;
+  transition-property: transform;
+  transform: rotate(90deg);
+}
+.toggle-btn--close .toggle-btn__icon-bottom-rect {
+  transition: 0.25s 0s;
+  transition-property: transform;
+  transform: translate(0, -8px);
+}
+.toggle-btn--close .toggle-btn__icon-rects {
+  transition: transform 0.5s 0.25s;
+  transition-property: transform;
+  transform: rotate(45deg);
+}
