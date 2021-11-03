@@ -85,4 +85,12 @@
     	background-image: url('../img/#{$img-name}@2x.#{$extension}');
     }
   }
+
+  .no-js & {
+    background-image: url('../img/#{$img-name}.#{$extension}');
+
+    @media (min-resolution: 144dpi), (css-min-resolution: 1.5dppx) {
+    	background-image: url('../img/#{$img-name}@2x.#{$extension}');
+    }
+  }
 }
