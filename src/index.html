@@ -13,7 +13,11 @@
   <a href="#maincontent" class="visuallyhidden skiptocontent">Chuyển đến nội dung chính</a>
   <header class="header page__header">
     <div class="logo__wrapper">
-      <a class="logo header__logo link"><img src="img/logo.jpg" alt="Revo. Your personalized coffee" width="109" height="36"></a>
+      <a class="logo header__logo link">
+        <picture>
+          <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp"><img src="img/logo.jpg" alt="Revo. Your personalized coffee" width="109" height="36" srcset="img/logo.jpg 1x, img/logo@2x.jpg 2x">
+        </picture>
+      </a>
     </div>
     <nav class="nav header__nav">
       <h2 class="visuallyhidden">Dẫn đường</h2>
@@ -21,14 +25,10 @@
         <li class="nav__cart-item">
           <a href="#" data-cart-num="2" class="nav__goods-link nav__goods-link--cart link">
             <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="24" height="24" fill="none" />
-              <path
-                d="M4.31755 4.66388H17.7273C17.7677 4.66388 17.8045 4.67932 17.8424 4.69091L18.172 3.58959C18.2768 3.23936 18.5945 3 18.9546 3H20.5909C20.8168 3 21 3.18625 21 3.41598V4.2479C21 4.47763 20.8168 4.66388 20.5909 4.66388H19.5606L17.0045 13.2046L17.9592 14.337C18.3365 14.7846 18.5064 15.4013 18.3327 15.9637C18.1106 16.683 17.4863 17.1429 16.7664 17.1429H5.04544C4.81951 17.1429 4.63634 16.9566 4.63634 16.7269V15.895C4.63634 15.6652 4.81951 15.479 5.04544 15.479H16.7665L15.4697 13.9406C15.4371 13.9019 15.4131 13.8583 15.3884 13.8151H7.46083C6.82675 13.8151 6.24974 13.4428 5.97974 12.8594L3.12503 6.69125C3.04315 6.51374 3 6.31673 3 6.12131V6.0035C3 5.26369 3.5899 4.66388 4.31755 4.66388Z"
-                fill="currentColor" />
-              <path d="M16.1786 21.0001C15.291 21.0001 14.5714 20.2805 14.5714 19.3929C14.5714 18.5053 15.291 17.7858 16.1786 17.7858C17.0662 17.7858 17.7857 18.5053 17.7857 19.3929C17.7857 20.2805 17.0662 21.0001 16.1786 21.0001Z"
-                fill="currentColor" />
-              <path d="M6.53574 21.0001C5.64814 21.0001 4.9286 20.2805 4.9286 19.3929C4.9286 18.5053 5.64814 17.7858 6.53574 17.7858C7.42334 17.7858 8.14288 18.5053 8.14288 19.3929C8.14288 20.2805 7.42334 21.0001 6.53574 21.0001Z"
-                fill="currentColor" />
+              <rect width="24" height="24" fill="none"/>
+              <path d="M4.31755 4.66388H17.7273C17.7677 4.66388 17.8045 4.67932 17.8424 4.69091L18.172 3.58959C18.2768 3.23936 18.5945 3 18.9546 3H20.5909C20.8168 3 21 3.18625 21 3.41598V4.2479C21 4.47763 20.8168 4.66388 20.5909 4.66388H19.5606L17.0045 13.2046L17.9592 14.337C18.3365 14.7846 18.5064 15.4013 18.3327 15.9637C18.1106 16.683 17.4863 17.1429 16.7664 17.1429H5.04544C4.81951 17.1429 4.63634 16.9566 4.63634 16.7269V15.895C4.63634 15.6652 4.81951 15.479 5.04544 15.479H16.7665L15.4697 13.9406C15.4371 13.9019 15.4131 13.8583 15.3884 13.8151H7.46083C6.82675 13.8151 6.24974 13.4428 5.97974 12.8594L3.12503 6.69125C3.04315 6.51374 3 6.31673 3 6.12131V6.0035C3 5.26369 3.5899 4.66388 4.31755 4.66388Z" fill="currentColor"/>
+              <path d="M16.1786 21.0001C15.291 21.0001 14.5714 20.2805 14.5714 19.3929C14.5714 18.5053 15.291 17.7858 16.1786 17.7858C17.0662 17.7858 17.7857 18.5053 17.7857 19.3929C17.7857 20.2805 17.0662 21.0001 16.1786 21.0001Z" fill="currentColor"/>
+              <path d="M6.53574 21.0001C5.64814 21.0001 4.9286 20.2805 4.9286 19.3929C4.9286 18.5053 5.64814 17.7858 6.53574 17.7858C7.42334 17.7858 8.14288 18.5053 8.14288 19.3929C8.14288 20.2805 7.42334 21.0001 6.53574 21.0001Z" fill="currentColor"/>
             </svg>
           </a>
         </li>
@@ -36,29 +36,28 @@
 
       <ul class="nav__site-list">
         <li class="nav__site-item"><a class="nav__site-link nav__site-link--active link">Trang chủ</a></li>
-        <li class="nav__site-item"><a lang="en" href="" class="nav__site-link link">Coffee</a></li>
-        <li class="nav__site-item"><a href="" class="nav__site-link link">Phin mạ màu</a></li>
-        <li class="nav__site-item"><a href="" class="nav__site-link link">Combo phin phê</a></li>
-        <li class="nav__site-item"><a href="" class="nav__site-link link">Giftset</a></li>
-        <li class="nav__site-item"><a href="" class="nav__site-link link">Liên hệ</a></li>
+        <li class="nav__site-item"><a lang="en" href class="nav__site-link link">Coffee</a></li>
+        <li class="nav__site-item"><a href class="nav__site-link link">Phin mạ màu</a></li>
+        <li class="nav__site-item"><a href class="nav__site-link link">Combo phin phê</a></li>
+        <li class="nav__site-item"><a href class="nav__site-link link">Giftset</a></li>
+        <li class="nav__site-item"><a href class="nav__site-link link">Liên hệ</a></li>
       </ul>
 
       <button class="nav__toggle-btn toggle-btn">
         <span class="visuallyhidden">Dẫn đường</span>
         <svg class="toggle-btn__icon" width="26" height="26">
           <g class="toggle-btn__icon-rects" fill="currentColor">
-            <rect class="toggle-btn__icon-top-rect" width="24" height="2" x="1" y="4" />
-            <rect class="toggle-btn__icon-middle-rect" width="24" height="2" x="1" y="12" />
-            <rect class="toggle-btn__icon-bottom-rect" width="24" height="2" x="1" y="20" />
+            <rect class="toggle-btn__icon-top-rect" width="24" height="2" x="1" y="4"/>
+            <rect class="toggle-btn__icon-middle-rect" width="24" height="2" x="1" y="12"/>
+            <rect class="toggle-btn__icon-bottom-rect" width="24" height="2" x="1" y="20"/>
           </g>
         </svg>
       </button>
     </nav>
 
     <section class="promo header__promo">
-      <h2 lang="en" class="promo__slogan">Your <br> <span class="promo__slogan-accent">personalized</span> <br> coffee</h2>
-
-      <figure class="promo__slider" data-slide="1"></figure>
+      <h2 lang="en" class="promo__slogan"><span class="promo__slogan-accent--white">Your</span> <br> <span class="promo__slogan-accent">personalized</span> <br> <span class="promo__slogan-accent--white">coffee</span></h2>
+      <figure class="promo__slider" style="--promo-slider-img-name: 'promo-slide-1'"></figure>
     </section>
 
   </header>
@@ -96,7 +95,7 @@
 
       <ul class="favorite-goods__list">
         <li class="goods-card">
-          <a class="goods-card__link link" href="#"><img class="goods-card__img" width="235" height="256" src="img/favorite-goods-1.jpg" alt="REVO Morning"></a>
+          <a class="goods-card__link link" href="#"><picture><source srcset="img/favorite-goods-1.webp 1x, img/favorite-goods-1@2x.webp 2x" type="image/webp"><picture><source srcset="img/favorite-goods-1.webp 1x, img/favorite-goods-1@2x.webp 2x" type="image/webp"><img class="goods-card__img" width="235" height="256" src="img/favorite-goods-1.jpg" alt="REVO Morning" srcset="img/favorite-goods-1.jpg 1x, img/favorite-goods-1@2x.jpg 2x"></picture></picture></a>
           <div class="goods-card__inner">
             <p class="goods-card__price">99.000</p>
             <h3 lang="en" class="goods-card__title"><a class="goods-card__link link" href="#">REVO Morning</a></h3>
@@ -108,7 +107,7 @@
           </div>
         </li>
         <li class="goods-card">
-          <a class="goods-card__link link" href="#"><img class="goods-card__img" width="235" height="256" src="img/favorite-goods-2.jpg" alt="REVO Origin"></a>
+          <a class="goods-card__link link" href="#"><picture><source srcset="img/favorite-goods-2.webp 1x, img/favorite-goods-2@2x.webp 2x" type="image/webp"><picture><source srcset="img/favorite-goods-2.webp 1x, img/favorite-goods-2@2x.webp 2x" type="image/webp"><img class="goods-card__img" width="235" height="256" src="img/favorite-goods-2.jpg" alt="REVO Origin" srcset="img/favorite-goods-2.jpg 1x, img/favorite-goods-2@2x.jpg 2x"></picture></picture></a>
           <div class="goods-card__inner">
             <p class="goods-card__price">139.000</p>
             <h3 lang="en" class="goods-card__title"><a class="goods-card__link link" href="#">REVO Origin</a></h3>
@@ -120,7 +119,7 @@
           </div>
         </li>
         <li class="goods-card">
-          <a class="goods-card__link link" href="#"><img class="goods-card__img" width="235" height="256" src="img/favorite-goods-3.jpg" alt="REVO Everyday"></a>
+          <a class="goods-card__link link" href="#"><picture><source srcset="img/favorite-goods-3.webp 1x, img/favorite-goods-3@2x.webp 2x" type="image/webp"><picture><source srcset="img/favorite-goods-3.webp 1x, img/favorite-goods-3@2x.webp 2x" type="image/webp"><img class="goods-card__img" width="235" height="256" src="img/favorite-goods-3.jpg" alt="REVO Everyday" srcset="img/favorite-goods-3.jpg 1x, img/favorite-goods-3@2x.jpg 2x"></picture></picture></a>
           <div class="goods-card__inner">
             <p class="goods-card__price">85.000</p>
             <h3 lang="en" class="goods-card__title"><a class="goods-card__link link" href="#">REVO Everyday</a></h3>
@@ -132,7 +131,7 @@
           </div>
         </li>
         <li class="goods-card">
-          <a class="goods-card__link link" href="#"><img class="goods-card__img" width="235" height="256" src="img/favorite-goods-4.jpg" alt="REVO Đậm Đà"></a>
+          <a class="goods-card__link link" href="#"><picture><source srcset="img/favorite-goods-4.webp 1x, img/favorite-goods-4@2x.webp 2x" type="image/webp"><picture><source srcset="img/favorite-goods-4.webp 1x, img/favorite-goods-4@2x.webp 2x" type="image/webp"><img class="goods-card__img" width="235" height="256" src="img/favorite-goods-4.jpg" alt="REVO Đậm Đà" srcset="img/favorite-goods-4.jpg 1x, img/favorite-goods-4@2x.jpg 2x"></picture></picture></a>
           <div class="goods-card__inner">
             <p class="goods-card__price">75.000</p>
             <h3 class="goods-card__title"><a class="goods-card__link link" href="#">REVO Đậm Đà</a></h3>
@@ -144,7 +143,7 @@
           </div>
         </li>
         <li class="goods-card">
-          <a class="goods-card__link link" href="#"><img class="goods-card__img" width="235" height="256" src="img/favorite-goods-5.jpg" alt="REVO Honey"></a>
+          <a class="goods-card__link link" href="#"><picture><source srcset="img/favorite-goods-5.webp 1x, img/favorite-goods-5@2x.webp 2x" type="image/webp"><picture><source srcset="img/favorite-goods-5.webp 1x, img/favorite-goods-5@2x.webp 2x" type="image/webp"><img class="goods-card__img" width="235" height="256" src="img/favorite-goods-5.jpg" alt="REVO Honey" srcset="img/favorite-goods-5.jpg 1x, img/favorite-goods-5@2x.jpg 2x"></picture></picture></a>
           <div class="goods-card__inner">
             <p class="goods-card__price">99.000</p>
             <h3 lang="en" class="goods-card__title"><a class="goods-card__link link" href="#">REVO Honey</a></h3>
@@ -156,7 +155,7 @@
           </div>
         </li>
         <li class="goods-card">
-          <a class="goods-card__link link" href="#"><img class="goods-card__img" width="235" height="256" src="img/favorite-goods-6.jpg" alt="REVO Natural"></a>
+          <a class="goods-card__link link" href="#"><picture><source srcset="img/favorite-goods-6.webp 1x, img/favorite-goods-6@2x.webp 2x" type="image/webp"><picture><source srcset="img/favorite-goods-6.webp 1x, img/favorite-goods-6@2x.webp 2x" type="image/webp"><img class="goods-card__img" width="235" height="256" src="img/favorite-goods-6.jpg" alt="REVO Natural" srcset="img/favorite-goods-6.jpg 1x, img/favorite-goods-6@2x.jpg 2x"></picture></picture></a>
           <div class="goods-card__inner">
             <p class="goods-card__price">75.000</p>
             <h3 lang="en" class="goods-card__title"><a class="goods-card__link link" href="#">REVO Natural</a></h3>
@@ -176,7 +175,7 @@
 
       <ul class="gift__slider">
         <li class="goods-card goods-card--big gift__slide gift__slide--active">
-          <img class="goods-card__img goods-card__img--big" src="img/best-goods-slide-1.png" alt="" width="490" height="460">
+          <picture><source srcset="img/best-goods-slide-1.webp 1x, img/best-goods-slide-1@2x.webp 2x" type="image/webp"><picture><source srcset="img/best-goods-slide-1.webp 1x, img/best-goods-slide-1@2x.webp 2x" type="image/webp"><img class="goods-card__img goods-card__img--big" src="img/best-goods-slide-1.png" alt width="490" height="460" srcset="img/best-goods-slide-1.png 1x, img/best-goods-slide-1@2x.png 2x"></picture></picture>
           <div class="goods-card__inner goods-card__inner--big">
             <p class="goods-card__price">285.000</p>
             <h3 class="goods-card__title"><a class="goods-card__link link" href="#">Giftset "Cà phê phin Việt Nam"</a></h3>
@@ -196,7 +195,7 @@
           </div>
         </li>
         <li class="goods-card goods-card--big gift__slide">
-          <img class="goods-card__img goods-card__img--big" src="img/best-goods-slide-1.png" alt="" width="490" height="460">
+          <picture><source srcset="img/best-goods-slide-1.webp 1x, img/best-goods-slide-1@2x.webp 2x" type="image/webp"><picture><source srcset="img/best-goods-slide-1.webp 1x, img/best-goods-slide-1@2x.webp 2x" type="image/webp"><img class="goods-card__img goods-card__img--big" src="img/best-goods-slide-1.png" alt width="490" height="460" srcset="img/best-goods-slide-1.png 1x, img/best-goods-slide-1@2x.png 2x"></picture></picture>
           <div class="goods-card__inner goods-card__inner--big">
             <p class="goods-card__price">285.000</p>
             <h3 class="goods-card__title"><a class="goods-card__link link" href="#">Giftset "Cà phê phin Việt Nam"</a></h3>
@@ -216,7 +215,7 @@
           </div>
         </li>
         <li class="goods-card goods-card--big gift__slide">
-          <img class="goods-card__img goods-card__img--big" src="img/best-goods-slide-1.png" alt="" width="490" height="460">
+          <picture><source srcset="img/best-goods-slide-1.webp 1x, img/best-goods-slide-1@2x.webp 2x" type="image/webp"><picture><source srcset="img/best-goods-slide-1.webp 1x, img/best-goods-slide-1@2x.webp 2x" type="image/webp"><img class="goods-card__img goods-card__img--big" src="img/best-goods-slide-1.png" alt width="490" height="460" srcset="img/best-goods-slide-1.png 1x, img/best-goods-slide-1@2x.png 2x"></picture></picture>
           <div class="goods-card__inner goods-card__inner--big">
             <p class="goods-card__price">285.000</p>
             <h3 class="goods-card__title"><a class="goods-card__link link" href="#">Giftset "Cà phê phin Việt Nam"</a></h3>
@@ -250,7 +249,7 @@
 
       <ul class="combo__list">
         <li class="goods-card goods-card--middle">
-          <a class="goods-card__link link" href="#"><img class="goods-card__img goods-card__img--middle" width="360" height="300" src="img/goods-personalized-1.jpg" alt="Combo Revo Đậm Đà"></a>
+          <a class="goods-card__link link" href="#"><picture><source srcset="img/goods-personalized-1.webp 1x, img/goods-personalized-1@2x.webp 2x" type="image/webp"><picture><source srcset="img/goods-personalized-1.webp 1x, img/goods-personalized-1@2x.webp 2x" type="image/webp"><img class="goods-card__img goods-card__img--middle" width="360" height="300" src="img/goods-personalized-1.jpg" alt="Combo Revo Đậm Đà" srcset="img/goods-personalized-1.jpg 1x, img/goods-personalized-1@2x.jpg 2x"></picture></picture></a>
           <div class="goods-card__inner goods-card__inner--middle">
             <p class="goods-card__price">147.000<span class="goods-card__old-price">155.000</span></p>
             <h3 class="goods-card__title"><a class="goods-card__link link" href="#">Combo Revo Đậm Đà</a></h3>
@@ -262,7 +261,7 @@
           </div>
         </li>
         <li class="goods-card goods-card--middle">
-          <a class="goods-card__link link" href="#"><img class="goods-card__img goods-card__img--middle" width="360" height="300" src="img/goods-personalized-2.jpg" alt="Combo Revo Everyday"></a>
+          <a class="goods-card__link link" href="#"><picture><source srcset="img/goods-personalized-2.webp 1x, img/goods-personalized-2@2x.webp 2x" type="image/webp"><picture><source srcset="img/goods-personalized-2.webp 1x, img/goods-personalized-2@2x.webp 2x" type="image/webp"><img class="goods-card__img goods-card__img--middle" width="360" height="300" src="img/goods-personalized-2.jpg" alt="Combo Revo Everyday" srcset="img/goods-personalized-2.jpg 1x, img/goods-personalized-2@2x.jpg 2x"></picture></picture></a>
           <div class="goods-card__inner goods-card__inner--middle">
             <p class="goods-card__price">156.000<span class="goods-card__old-price">165.000</span></p>
             <h3 lang="en" class="goods-card__title"><a class="goods-card__link link" href="#">Combo Revo Everyday</a></h3>
@@ -274,7 +273,7 @@
           </div>
         </li>
         <li class="goods-card goods-card--middle">
-          <a class="goods-card__link link" href="#"><img class="goods-card__img goods-card__img--middle" width="360" height="300" src="img/goods-personalized-1.jpg" alt="Combo Revo Honey"></a>
+          <a class="goods-card__link link" href="#"><picture><source srcset="img/goods-personalized-1.webp 1x, img/goods-personalized-1@2x.webp 2x" type="image/webp"><picture><source srcset="img/goods-personalized-1.webp 1x, img/goods-personalized-1@2x.webp 2x" type="image/webp"><img class="goods-card__img goods-card__img--middle" width="360" height="300" src="img/goods-personalized-1.jpg" alt="Combo Revo Honey" srcset="img/goods-personalized-1.jpg 1x, img/goods-personalized-1@2x.jpg 2x"></picture></picture></a>
           <div class="goods-card__inner goods-card__inner--middle">
             <p class="goods-card__price">275.000<span class="goods-card__old-price">260.000</span></p>
             <h3 lang="en" class="goods-card__title"><a class="goods-card__link link" href="#">Combo Revo Honey</a></h3>
@@ -286,7 +285,7 @@
           </div>
         </li>
         <li class="goods-card goods-card--middle">
-          <a class="goods-card__link link" href="#"><img class="goods-card__img goods-card__img--middle" width="360" height="300" src="img/goods-personalized-4.jpg" alt="Combo Revo Natural"></a>
+          <a class="goods-card__link link" href="#"><picture><source srcset="img/goods-personalized-4.webp 1x, img/goods-personalized-4@2x.webp 2x" type="image/webp"><picture><source srcset="img/goods-personalized-4.webp 1x, img/goods-personalized-4@2x.webp 2x" type="image/webp"><img class="goods-card__img goods-card__img--middle" width="360" height="300" src="img/goods-personalized-4.jpg" alt="Combo Revo Natural" srcset="img/goods-personalized-4.jpg 1x, img/goods-personalized-4@2x.jpg 2x"></picture></picture></a>
           <div class="goods-card__inner goods-card__inner--middle">
             <p class="goods-card__price">249.000<span class="goods-card__old-price">236.000</span></p>
             <h3 lang="en" class="goods-card__title"><a class="goods-card__link link" href="#">Combo Revo Natural</a></h3>
